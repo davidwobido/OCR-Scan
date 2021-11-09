@@ -1,0 +1,9 @@
+.uploadImage {
+  display: none;
+}
+
+.wrapper {
+  display: grid;
+  gap: 1rem;
+  justify-items: center;
+}

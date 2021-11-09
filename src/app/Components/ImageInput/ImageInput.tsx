@@ -1,4 +1,5 @@
 import React, { ChangeEvent, useState } from 'react';
+import styles from './ImageInput.module.css';
 
 function ImageInput() {
   const [imageUrl, setImageUrl] = useState<string | null>(null);
@@ -12,13 +13,15 @@ function ImageInput() {
     setImageUrl(newImageUrl);
   };
   return (
-    <label>
+    <label className={styles.wrapper}>
+      <img src="src/lib/Upload_icon.svg" />
       <input
         type="file"
         accept="image/*"
         onChange={handleChange}
-        className="uploadImage"
-      />
+        className={styles.uploadImage}
+      />{' '}
+      <p>Upload an image</p>
       {imageUrl && <img src={imageUrl} />}
     </label>
   );
