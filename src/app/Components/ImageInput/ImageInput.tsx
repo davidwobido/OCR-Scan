@@ -1,13 +1,12 @@
 import React, { ChangeEvent, useState } from 'react';
 import styles from './ImageInput.module.css';
 
-// Was passiert hier?
+// type von imageinput props ist der von onupload (wo die url gespeichert ist)
 type ImageInputProps = {
   onUpload: (url: string) => void;
 };
 
 function ImageInput({ onUpload }: ImageInputProps) {
-  // Was sind die ImageInputProps?
   const [imageUrl, setImageUrl] = useState<string | null>(null);
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {

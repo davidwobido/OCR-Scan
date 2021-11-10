@@ -8,7 +8,7 @@ function Scan() {
   return (
     <div className={styles.wrapper}>
       <ImageInput onUpload={setImageUrl} />
-      {/* This will be a single component  */}
+      {/* This will be an extra component: */}
       <section className={styles.menubar}>
         <button disabled={imageUrl === null}>Scan</button>
         <a href="#" className={styles.button__inactive}>
