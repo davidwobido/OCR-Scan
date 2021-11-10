@@ -3,6 +3,7 @@ import ImageInput from '../../Components/ImageInput/ImageInput';
 import styles from './Scan.module.css';
 import { RecognizeProgress, recognizeText } from '../../utils/ocr';
 import Progress from '../../Components/Progress/Progress';
+import AddDocumentForm from '../../components/AddDocumentForm/AddDocumentForm';
 
 function Scan() {
   const [imageUrl, setImageUrl] = useState<string | null>(null);
@@ -32,6 +33,17 @@ function Scan() {
           status={recognizeProgress.status}
         />
       )}
+
+      {recognizedText && <AddDocumentForm text={recognizedText} />}
+
+      {/* If imageUrl
+      button
+      else if 
+      recognizedProgress
+      progress + status
+      else if 
+      recognizedText
+      AddDocumentForm */}
 
       <button
         className={styles.button__scan}

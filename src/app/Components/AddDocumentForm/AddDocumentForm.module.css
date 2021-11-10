@@ -1,0 +1,13 @@
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  column-gap: 0.5rem;
+  row-gap: 1rem;
+  place-items: center;
+  border-radius: 1rem;
+  border: 0.1rem solid;
+  background-color: var(--color-text);
+  color: var(--color-primary);
+  padding: 2.5rem;
+}
