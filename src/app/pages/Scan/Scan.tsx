@@ -3,7 +3,7 @@ import ImageInput from '../../Components/ImageInput/ImageInput';
 import styles from './Scan.module.css';
 import { RecognizeProgress, recognizeText } from '../../utils/ocr';
 import Progress from '../../Components/Progress/Progress';
-import AddDocumentForm from '../../components/AddDocumentForm/AddDocumentForm';
+import AddDocumentForm from '../../Components/AddDocumentForm/AddDocumentForm';
 
 function Scan() {
   const [imageUrl, setImageUrl] = useState<string | null>(null);
