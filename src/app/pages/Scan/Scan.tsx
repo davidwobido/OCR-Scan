@@ -20,9 +20,8 @@ function Scan() {
           {imageUrl ? (
             <img src={imageUrl} className={styles.image} />
           ) : (
-            <img src="src/lib/Upload_icon.svg" />
+            <ImageInput onUpload={setImageUrl} />
           )}
-          <ImageInput onUpload={setImageUrl} />
         </div>
       )}
       {recognizeProgress && (

@@ -24,6 +24,7 @@ function ImageInput({ onUpload }: ImageInputProps) {
         onChange={handleChange}
         className={styles.uploadImage}
       />{' '}
+      <img src="src/lib/Upload_icon.svg" />
       <p>Upload an image</p>
     </label>
   );
