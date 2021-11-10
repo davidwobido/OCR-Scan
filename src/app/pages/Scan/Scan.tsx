@@ -13,6 +13,7 @@ function Scan() {
   return (
     <div className={styles.wrapper}>
       <h1>OCR Scan</h1>
+
       {recognizedText ? (
         <p>{recognizedText}</p>
       ) : (
@@ -24,25 +25,30 @@ function Scan() {
           )}
         </div>
       )}
+
       {recognizeProgress && (
         <Progress
           progress={recognizeProgress.progress * 100}
           status={recognizeProgress.status}
         />
       )}
+
+      <button
+        className={styles.button__scan}
+        disabled={imageUrl === null}
+        onClick={() => {
+          if (imageUrl) {
+            recognizeText(imageUrl, setRecognizeProgress).then(
+              setRecognizedText
+            );
+          }
+        }}
+      >
+        Scan
+      </button>
+
       <section className={styles.menubar}>
-        <button
-          disabled={imageUrl === null}
-          onClick={() => {
-            if (imageUrl) {
-              recognizeText(imageUrl, setRecognizeProgress).then(
-                setRecognizedText
-              );
-            }
-          }}
-        >
-          Scan
-        </button>
+        <button className={styles.button__inactive}>OCR</button>
         <button className={styles.button__inactive}>Docs</button>
       </section>
     </div>
