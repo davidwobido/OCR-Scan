@@ -7,13 +7,20 @@ function Scan() {
 
   return (
     <div className={styles.wrapper}>
-      <ImageInput onUpload={setImageUrl} />
+      <h1>OCR Scan</h1>
+      <div className={styles.uploadwrapper}>
+        {imageUrl ? (
+          <img src={imageUrl} className={styles.image} />
+        ) : (
+          <img src="src/lib/Upload_icon.svg" />
+        )}
+        {/* Show the image as soon a new one is uploaded */}
+        <ImageInput onUpload={setImageUrl} />
+      </div>
       {/* This will be an extra component: */}
       <section className={styles.menubar}>
         <button disabled={imageUrl === null}>Scan</button>
-        <a href="#" className={styles.button__inactive}>
-          Docs
-        </a>
+        <button className={styles.button__inactive}>Docs</button>
       </section>
     </div>
   );
