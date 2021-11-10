@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import ImageInput from '../../Components/ImageInput/ImageInput';
 import styles from './Scan.module.css';
-import Tesseract from 'tesseract.js';
+import { RecognizeProgress, recognizeText } from '../../utils/ocr';
+import Progress from '../../Components/Progress/Progress';
 
 function Scan() {
   const [imageUrl, setImageUrl] = useState<string | null>(null);
   const [recognizedText, setRecognizedText] = useState<string | null>(null);
-  const [progress, setProgress] = useState<number | null>(null);
-  const [status, setStatus] = useState<string | null>(null);
+  const [recognizeProgress, setRecognizeProgress] =
+    useState<RecognizeProgress | null>(null);
 
   return (
     <div className={styles.wrapper}>
@@ -20,30 +21,24 @@ function Scan() {
             <img src={imageUrl} className={styles.image} />
           ) : (
             <img src="src/lib/Upload_icon.svg" />
-          )}{' '}
+          )}
           <ImageInput onUpload={setImageUrl} />
         </div>
       )}
-      <div className={styles.progress}>
-        {progress ? <p>{progress * 100}%</p> : null}{' '}
-        {status ? <p>: {status}</p> : null}
-      </div>
-
+      {recognizeProgress && (
+        <Progress
+          progress={recognizeProgress.progress * 100}
+          status={recognizeProgress.status}
+        />
+      )}
       <section className={styles.menubar}>
         <button
           disabled={imageUrl === null}
           onClick={() => {
             if (imageUrl) {
-              Tesseract.recognize(imageUrl, 'eng', {
-                logger: (message) => {
-                  console.log(message);
-                  setStatus(message.status);
-                  setProgress(message.progress);
-                },
-              }).then((result) => {
-                const text = result.data.text;
-                setRecognizedText(text);
-              });
+              recognizeText(imageUrl, setRecognizeProgress).then(
+                setRecognizedText
+              );
             }
           }}
         >
