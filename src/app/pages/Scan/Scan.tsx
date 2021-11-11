@@ -1,21 +1,19 @@
 import React, { useState } from 'react';
 import ImageInput from '../../Components/ImageInput/ImageInput';
 import styles from './Scan.module.css';
-import { RecognizeProgress, recognizeText } from '../../utils/ocr';
 import Progress from '../../Components/Progress/Progress';
 import AddDocumentForm from '../../Components/AddDocumentForm/AddDocumentForm';
+import useRecognizeText from '../../utils/useRecognizeText';
 
 function Scan() {
   const [imageUrl, setImageUrl] = useState<string | null>(null);
-  const [recognizedText, setRecognizedText] = useState<string | null>(null);
-  const [recognizeProgress, setRecognizeProgress] =
-    useState<RecognizeProgress | null>(null);
+  const { text, progress, recognize } = useRecognizeText();
 
   return (
     <div className={styles.wrapper}>
       <h1>OCR Scan</h1>
-      {recognizedText ? (
-        <p>{recognizedText}</p>
+      {text ? (
+        <p>{text}</p>
       ) : (
         <div className={styles.uploadwrapper}>
           {imageUrl ? (
@@ -25,22 +23,18 @@ function Scan() {
           )}
         </div>
       )}
-      {recognizeProgress && (
-        <Progress
-          progress={recognizeProgress.progress * 100}
-          status={recognizeProgress.status}
-        />
+
+      {progress && (
+        <Progress progress={progress.progress * 100} status={progress.status} />
       )}
-      {recognizedText && <AddDocumentForm text={recognizedText} />}
+      {text && <AddDocumentForm text={text} />}
 
       <button
         className={styles.button__scan}
         disabled={imageUrl === null}
         onClick={() => {
           if (imageUrl) {
-            recognizeText(imageUrl, setRecognizeProgress).then(
-              setRecognizedText
-            );
+            recognize(imageUrl);
           }
         }}
       >
