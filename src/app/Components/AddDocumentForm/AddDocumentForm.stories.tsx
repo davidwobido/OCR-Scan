@@ -6,4 +6,4 @@ export default {
   title: 'Components/AddDocumentForm',
 };
 
-export const Default = () => <AddDocumentForm />;
+export const Default = () => <AddDocumentForm text="Example text" />;
