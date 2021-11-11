@@ -24,7 +24,7 @@ function AddDocumentForm({ text }: AddDocumentFormProps): JSX.Element {
 
   return (
     <form onSubmit={handleSubmit} className={styles.form}>
-      <div className="wrapper">
+      <div>
         <input
           className={styles.form__text}
           type="text"
@@ -37,7 +37,7 @@ function AddDocumentForm({ text }: AddDocumentFormProps): JSX.Element {
           className={styles.form__submit}
           disabled={!title || isLoading}
         />
-      </div>{' '}
+      </div>
     </form>
   );
 }

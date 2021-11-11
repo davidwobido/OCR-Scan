@@ -37,6 +37,6 @@
   background-color: var(--color-secondary);
 }
 
-button:disabled {
+.button__scan:disabled {
   opacity: 20%;
 }

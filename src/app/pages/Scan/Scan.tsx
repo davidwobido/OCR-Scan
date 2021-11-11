@@ -52,12 +52,3 @@ function Scan() {
   );
 }
 export default Scan;
-
-// If imageUrl
-//       show button
-//       else if
-//       recognizedProgress
-//       show progress + status
-//       else if
-//       recognizedText
-//       show AddDocumentForm

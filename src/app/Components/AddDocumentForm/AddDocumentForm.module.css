@@ -1,11 +1,8 @@
 .form {
   display: grid;
-  grid-template-rows: 1fr;
   column-gap: 0.5rem;
   row-gap: 1rem;
   place-items: center;
-
-  /* border-radius: 2rem; */
   background-color: var(--color-neutral-bg);
   color: var(--color-primary);
   padding: 0.75rem;
@@ -15,7 +12,7 @@
 .form__submit {
   color: var(--color-neutral-bright);
   background: var(--color-secondary);
-  border-radius: 24px;
+  border-radius: 1.5rem;
   padding: 0.85em 2.75em;
   border: none;
   text-align: center;
