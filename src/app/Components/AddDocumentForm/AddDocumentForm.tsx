@@ -26,13 +26,16 @@ function AddDocumentForm({ text }: AddDocumentFormProps): JSX.Element {
 
   return (
     <form onSubmit={handleSubmit} className={styles.form}>
-      <input
-        type="text"
-        placeholder="Enter title"
-        value={title}
-        onChange={(event) => setTitle(event.target.value)}
-      />
-      <input type="submit" />
+      <div className="wrapper">
+        <input
+          className={styles.form__text}
+          type="text"
+          placeholder="Enter title"
+          value={title}
+          onChange={(event) => setTitle(event.target.value)}
+        />
+        <input type="submit" className={styles.form__submit} />
+      </div>{' '}
     </form>
   );
 }

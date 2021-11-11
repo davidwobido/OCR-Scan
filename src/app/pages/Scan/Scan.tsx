@@ -14,7 +14,6 @@ function Scan() {
   return (
     <div className={styles.wrapper}>
       <h1>OCR Scan</h1>
-
       {recognizedText ? (
         <p>{recognizedText}</p>
       ) : (
@@ -26,24 +25,13 @@ function Scan() {
           )}
         </div>
       )}
-
       {recognizeProgress && (
         <Progress
           progress={recognizeProgress.progress * 100}
           status={recognizeProgress.status}
         />
       )}
-
       {recognizedText && <AddDocumentForm text={recognizedText} />}
-
-      {/* If imageUrl
-      button
-      else if 
-      recognizedProgress
-      progress + status
-      else if 
-      recognizedText
-      AddDocumentForm */}
 
       <button
         className={styles.button__scan}
@@ -67,3 +55,12 @@ function Scan() {
   );
 }
 export default Scan;
+
+// If imageUrl
+//       show button
+//       else if
+//       recognizedProgress
+//       show progress + status
+//       else if
+//       recognizedText
+//       show AddDocumentForm
