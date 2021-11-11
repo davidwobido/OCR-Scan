@@ -24,22 +24,25 @@ function Scan() {
         </div>
       )}
 
-      {progress && (
+      {!text && progress && (
         <Progress progress={progress.progress * 100} status={progress.status} />
       )}
+
       {text && <AddDocumentForm text={text} />}
 
-      <button
-        className={styles.button__scan}
-        disabled={imageUrl === null}
-        onClick={() => {
-          if (imageUrl) {
-            recognize(imageUrl);
-          }
-        }}
-      >
-        Scan
-      </button>
+      {!progress && (
+        <button
+          className={styles.button__scan}
+          disabled={imageUrl === null}
+          onClick={() => {
+            if (imageUrl) {
+              recognize(imageUrl);
+            }
+          }}
+        >
+          Scan
+        </button>
+      )}
 
       <section className={styles.menubar}>
         <button className={styles.button__inactive}>OCR</button>
