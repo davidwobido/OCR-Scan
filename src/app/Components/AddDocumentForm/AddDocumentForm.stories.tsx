@@ -3,7 +3,7 @@ import AddDocumentForm from './AddDocumentForm';
 
 export default {
   component: AddDocumentForm,
-  title: 'Pages/AddDocumentForm',
+  title: 'Components/AddDocumentForm',
 };
 
 export const Default = () => <AddDocumentForm />;
