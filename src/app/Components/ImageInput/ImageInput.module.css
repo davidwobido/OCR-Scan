@@ -1,0 +1,13 @@
+.uploadImage {
+  display: none;
+}
+
+.wrapper {
+  display: grid;
+  gap: 1rem;
+  align-content: center;
+  justify-items: center;
+  background: var(--color-neutral-bg);
+  padding: 4rem;
+  border-radius: 1.25rem;
+}

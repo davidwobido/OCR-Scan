@@ -1,0 +1,42 @@
+.wrapper {
+  display: grid;
+  grid-template-rows: 1fr 50% 1fr 1fr;
+  align-items: center;
+
+  /* gap: 4rem; */
+  justify-items: center;
+  height: 100vh;
+  padding: 5%;
+}
+
+.image {
+  width: 80%;
+  object-fit: scale-down;
+  justify-self: center;
+}
+
+.menubar {
+  display: flex;
+  align-items: center;
+  column-gap: 2rem;
+}
+
+.uploadwrapper {
+  display: grid;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.button__inactive {
+  color: var(--color-primary);
+  background: var(--color-neutral-bright);
+  border: 1px solid var(--color-primary);
+}
+
+.button__scan {
+  background-color: var(--color-secondary);
+}
+
+.button__scan:disabled {
+  opacity: 20%;
+}

@@ -1,0 +1,9 @@
+.wrapper {
+  display: grid;
+  justify-items: center;
+  row-gap: 0.25rem;
+  font-size: 0.7rem;
+  font-size: 0.625rem;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}

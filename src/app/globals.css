@@ -22,8 +22,10 @@ h1,
 h2,
 h3,
 p,
+a,
 .icon-text {
   font-family: Inter, sans-serif;
+  margin: 0;
 }
 
 h1 {
@@ -55,4 +57,18 @@ p {
 
 body {
   margin: 0;
+  padding: 20px;
+}
+
+button {
+  color: var(--color-neutral-bright);
+  background: var(--color-primary);
+  border-radius: 1.5rem;
+  padding: 0.85em 2.75em;
+  border: none;
+  text-align: center;
+  letter-spacing: 0.235em;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 0.875rem;
 }
