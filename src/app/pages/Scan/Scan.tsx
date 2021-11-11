@@ -45,7 +45,7 @@ function Scan() {
       )}
 
       <section className={styles.menubar}>
-        <button className={styles.button__inactive}>OCR</button>
+        <button className={styles.button__inactive}>Home</button>
         <button className={styles.button__inactive}>Docs</button>
       </section>
     </div>

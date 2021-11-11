@@ -25,9 +25,18 @@
   font-size: 0.875rem;
 }
 
+.form__submit:disabled {
+  opacity: 20%;
+}
+
 .form__submit:hover {
   opacity: 50%;
   cursor: pointer;
+}
+
+.form__submit:disabled:hover {
+  opacity: 20%;
+  cursor: not-allowed;
 }
 
 .form__text {
