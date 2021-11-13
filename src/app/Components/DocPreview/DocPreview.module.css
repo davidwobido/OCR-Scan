@@ -1,15 +1,21 @@
 .wrapper {
-  color: var(--color-neutral-bg);
-  border-radius: 1.25rem;
-  padding: 1rem;
+  background-color: var(--color-neutral-bg);
+  border-radius: 1rem;
+  padding: 1.25rem 2rem;
 }
 
 .title {
   color: var(--color-text);
+  font-size: 0.875em;
   font-weight: 500;
+  padding-bottom: 0.25em;
 }
 
 .text {
   color: var(--color-neutral);
   font-size: 0.875em;
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
