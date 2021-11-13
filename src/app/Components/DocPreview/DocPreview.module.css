@@ -1,7 +1,8 @@
 .wrapper {
   background-color: var(--color-neutral-bg);
   border-radius: 1rem;
-  padding: 1.25rem 2rem;
+  padding: 1rem 1.25rem;
+  margin: 1rem;
 }
 
 .title {
