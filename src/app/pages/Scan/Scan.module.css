@@ -2,9 +2,7 @@
   display: grid;
   grid-template-rows: 1fr 50% 1fr 1fr;
   align-items: center;
-
-  /* gap: 4rem; */
-  justify-items: center;
+  justify-content: center;
   height: 100vh;
   padding: 5%;
 }
