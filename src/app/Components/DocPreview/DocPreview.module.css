@@ -1,0 +1,15 @@
+.wrapper {
+  color: var(--color-neutral-bg);
+  border-radius: 1.25rem;
+  padding: 1rem;
+}
+
+.title {
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.text {
+  color: var(--color-neutral);
+  font-size: 0.875em;
+}
