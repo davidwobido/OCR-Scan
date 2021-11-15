@@ -3,19 +3,17 @@ import DocPreview, {
   DocPreviewProps,
 } from '../../Components/DocPreview/DocPreview';
 import styles from './DocList.module.css';
+import getDocuments from '../../utils/getDocuments';
 
 function DocList(): JSX.Element {
   const [documents, setDocuments] = useState<DocPreviewProps[]>([]);
 
   useEffect(() => {
-    async function fetchDocuments() {
-      const response = await fetch('https://json-server.machens.dev/docs');
-      console.log(response);
-      const newDocuments = await response.json();
+    async function load() {
+      const newDocuments = await getDocuments();
       setDocuments(newDocuments);
     }
-
-    fetchDocuments();
+    load();
   }, []);
 
   return (
