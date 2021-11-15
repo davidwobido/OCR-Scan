@@ -2,7 +2,7 @@
   background-color: var(--color-neutral-bg);
   border-radius: 1rem;
   padding: 1rem 1.25rem;
-  margin: 1rem;
+  margin: 1rem 0;
 }
 
 .title {

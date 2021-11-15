@@ -11,7 +11,7 @@ function Scan() {
 
   return (
     <div className={styles.wrapper}>
-      <h1>OCR Scan</h1>
+      <h1 className={styles.title}>OCR Scan</h1>
       {text ? (
         <p>{text}</p>
       ) : (
