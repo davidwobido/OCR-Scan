@@ -24,7 +24,6 @@ function DocList(): JSX.Element {
 
   return (
     <section className={styles.wrapper}>
-      <h1 className={styles.title}>Your Documents</h1>
       <SearchInput onSearch={setSearch} />
       <section className={styles.content}>
         {!filteredDocuments && <span>Loading ...</span>}
@@ -38,10 +37,6 @@ function DocList(): JSX.Element {
             />
           ))}
         </div>
-      </section>
-      <section className={styles.menubar}>
-        <button className={styles.button__inactive}>Home</button>
-        <button className={styles.button__inactive}>Docs</button>
       </section>
     </section>
   );

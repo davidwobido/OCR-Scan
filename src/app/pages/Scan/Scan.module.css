@@ -1,7 +1,6 @@
 .wrapper {
   display: grid;
-  grid-template-rows: 15% 60% 1fr 15%;
-  height: 100vh;
+  grid-template-rows: 60% 1fr;
 }
 
 .title {
@@ -15,25 +14,12 @@
   justify-self: center;
 }
 
-.menubar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  column-gap: 1rem;
-}
-
 .uploadwrapper {
   display: grid;
   gap: 1rem;
   justify-content: center;
   justify-self: center;
   align-self: center;
-}
-
-.button__inactive {
-  color: var(--color-primary);
-  background: var(--color-neutral-bright);
-  border: 1px solid var(--color-primary);
 }
 
 .button__scan {
