@@ -43,11 +43,6 @@ function Scan() {
           Scan
         </button>
       )}
-
-      <section className={styles.menubar}>
-        <button className={styles.button__inactive}>Home</button>
-        <button className={styles.button__inactive}>Docs</button>
-      </section>
     </div>
   );
 }
