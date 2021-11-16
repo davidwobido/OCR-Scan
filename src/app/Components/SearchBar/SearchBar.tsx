@@ -8,10 +8,6 @@ function SearchInput({ onSearch }: SearchInputProps): JSX.Element {
   const [value, setValue] = useState('');
 
   useEffect(() => {
-    if (value.length === 0) {
-      return;
-    }
-
     const timeoutId = setTimeout(() => {
       onSearch(value);
     }, 300);

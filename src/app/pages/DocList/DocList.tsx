@@ -2,11 +2,17 @@ import React, { useEffect, useState } from 'react';
 import DocPreview, {
   DocPreviewProps,
 } from '../../Components/DocPreview/DocPreview';
-import styles from './DocList.module.css';
 import getDocuments from '../../utils/getDocuments';
+import SearchInput from '../../Components/SearchBar/SearchBar';
+import styles from './DocList.module.css';
 
 function DocList(): JSX.Element {
   const [documents, setDocuments] = useState<DocPreviewProps[]>([]);
+  const [search, setSearch] = useState('');
+
+  const filteredDocuments = documents?.filter((document) =>
+    document.title.toLowerCase().includes(search.toLowerCase())
+  );
 
   useEffect(() => {
     async function load() {
@@ -19,12 +25,12 @@ function DocList(): JSX.Element {
   return (
     <section className={styles.wrapper}>
       <h1 className={styles.title}>All Documents</h1>
-      <section className={styles.searchBar}>search</section>
+      <SearchInput onSearch={setSearch} />
       <section className={styles.content}>
-        {documents === null && <span>Loading …</span>}
-        {!documents && <span>No documents</span>}
+        {!filteredDocuments && <span>Loading ...</span>}
+        {filteredDocuments?.length === 0 && <span>No documents found</span>}
         <div className={styles.previewList}>
-          {documents.map((document) => (
+          {filteredDocuments?.map((document) => (
             <DocPreview
               key={document.id}
               title={document.title}
