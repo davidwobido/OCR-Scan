@@ -1,6 +1,29 @@
 .wrapper {
+  display: grid;
+  grid-template-rows: 15% 15% 55% 15%;
   height: 100vh;
-  padding: 6%;
+}
+
+.title {
+  margin-left: 1.25rem;
+  margin-top: 1.75rem;
+}
+
+.menubar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 1rem;
+}
+
+.searchBar {
+  color: var(--color-neutral-bright);
+  border-radius: 1.5rem;
+  padding: 0.85em 2.75em;
+  border: 1px solid var(--color-primary);
+  text-align: center;
+  text-transform: uppercase;
+  align-self: center;
 }
 
 .button__inactive {
@@ -16,4 +39,10 @@
 
 .button__scan:disabled {
   opacity: 20%;
+}
+
+.content {
+  height: 100%;
+  overflow: scroll;
+  margin: 0 1rem 1rem;
 }

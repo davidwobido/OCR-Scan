@@ -1,14 +1,12 @@
 .wrapper {
   display: grid;
-  grid-template-rows: 10% 60% 1fr 10%;
-  align-items: center;
-  justify-content: center;
+  grid-template-rows: 15% 60% 1fr 15%;
   height: 100vh;
-  padding: 6%;
 }
 
 .title {
-  margin: 4%;
+  margin-left: 1.25rem;
+  margin-top: 1.75rem;
 }
 
 .image {
@@ -20,13 +18,16 @@
 .menubar {
   display: flex;
   align-items: center;
-  column-gap: 2rem;
+  justify-content: center;
+  column-gap: 1rem;
 }
 
 .uploadwrapper {
   display: grid;
   gap: 1rem;
   justify-content: center;
+  justify-self: center;
+  align-self: center;
 }
 
 .button__inactive {
@@ -38,6 +39,7 @@
 .button__scan {
   background-color: var(--color-secondary);
   justify-self: center;
+  align-self: center;
 }
 
 .button__scan:disabled {
