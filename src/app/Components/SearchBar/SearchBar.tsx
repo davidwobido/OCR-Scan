@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import styles from './SearchBar.module.css';
 
 type SearchInputProps = {
   onSearch: (value: string) => void;
@@ -22,7 +23,7 @@ function SearchInput({ onSearch }: SearchInputProps): JSX.Element {
       value={value}
       onChange={(event) => setValue(event.target.value)}
       placeholder="Enter search"
-      className="searchBar"
+      className={styles.searchBar}
     />
   );
 }

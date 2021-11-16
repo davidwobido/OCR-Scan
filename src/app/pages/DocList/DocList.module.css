@@ -1,6 +1,6 @@
 .wrapper {
   display: grid;
-  grid-template-rows: 15% 15% 55% 15%;
+  grid-template-rows: 15% 10% 60% 15%;
   height: 100vh;
 }
 
@@ -14,16 +14,6 @@
   align-items: center;
   justify-content: center;
   column-gap: 1rem;
-}
-
-.searchBar {
-  color: var(--color-neutral-bright);
-  border-radius: 1.5rem;
-  padding: 0.85em 2.75em;
-  border: 1px solid var(--color-primary);
-  text-align: center;
-  text-transform: uppercase;
-  align-self: center;
 }
 
 .button__inactive {

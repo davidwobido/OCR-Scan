@@ -24,7 +24,7 @@ function DocList(): JSX.Element {
 
   return (
     <section className={styles.wrapper}>
-      <h1 className={styles.title}>All Documents</h1>
+      <h1 className={styles.title}>Your Documents</h1>
       <SearchInput onSearch={setSearch} />
       <section className={styles.content}>
         {!filteredDocuments && <span>Loading ...</span>}
