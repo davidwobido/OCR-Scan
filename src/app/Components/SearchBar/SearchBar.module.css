@@ -1,0 +1,12 @@
+.searchBar {
+  color: var(--color-pri);
+  border-radius: 1.5rem;
+  padding: 0.85em 1.25em;
+  border: 1px solid var(--color-primary);
+  align-self: center;
+  margin: 1rem;
+}
+
+.searchBar:hover {
+  cursor: text;
+}
