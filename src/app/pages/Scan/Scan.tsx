@@ -11,7 +11,6 @@ function Scan() {
 
   return (
     <div className={styles.wrapper}>
-      <h1 className={styles.title}>OCR Scan</h1>
       {text ? (
         <p>{text}</p>
       ) : (
@@ -43,11 +42,6 @@ function Scan() {
           Scan
         </button>
       )}
-
-      <section className={styles.menubar}>
-        <button className={styles.button__inactive}>Home</button>
-        <button className={styles.button__inactive}>Docs</button>
-      </section>
     </div>
   );
 }
