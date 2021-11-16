@@ -26,6 +26,7 @@ function SearchInput({ onSearch }: SearchInputProps): JSX.Element {
       value={value}
       onChange={(event) => setValue(event.target.value)}
       placeholder="Enter search"
+      className="searchBar"
     />
   );
 }
